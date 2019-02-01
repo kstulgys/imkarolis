@@ -151,8 +151,6 @@ const server = new ApolloServer({
   }
 });
 
-// server.applyMiddleware({ app, path: '/graphql' })
-
 server.listen().then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 });
