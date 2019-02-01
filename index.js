@@ -140,12 +140,12 @@ const server = new ApolloServer({
       'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
     },
-    endpoint: 'https://0o0x85wqqw.sse.codesandbox.io/graphql',
+    endpoint: '',
     tabs: [
       {
-        endpoint: 'https://0o0x85wqqw.sse.codesandbox.io/graphql',
+        endpoint: '',
         query: defaultQuery,
-        name: 'Start here!'
+        name: 'Start here!!!'
       }
     ]
   }
