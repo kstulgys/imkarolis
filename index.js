@@ -90,13 +90,14 @@ const resolvers = {
 };
 
 const defaultQuery = `
-# Hello and Wellcome!
-# I'm pleased you have made it to my site!
-# My name is Karolis and I am a Front End Developer from Lithuania
-# I made this GraphQL API as my page because everyone loves GraphQL
+# Hello and Wellcome! I'm pleased you have made it to my site
+# I'm Karolis, 28 y male open-minded, self-taught Front-End/Full-stack Developer
+# Besides the "internet of things" I have a great interest in fitness, athletic performance and longevity
+
+# I have made this GraphQL API as my page because everyone loves GraphQL
 # If you are not familiar with it make sure to check the docs @ https://graphql.org/
 # P.S if you want to know me better just click "Play" to run the default query!
-# I'm looking forward to hearing from you @ karolis.stulgys@gmail.com 
+# I'm looking forward to hearing from you @ karolis.stulgys@gmail.com :)
 
 query {
   contact_details {
