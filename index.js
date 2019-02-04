@@ -166,7 +166,6 @@ const server = new ApolloServer({
   context: {
     data
   },
-  introspection: true,
   playground: {
     settings: {
       // 'general.betaUpdates': false,
@@ -174,13 +173,13 @@ const server = new ApolloServer({
       'editor.fontSize': 13,
       // 'editor.fontFamily':
       // "'Source Code Pro', 'Consolas', 'Inconsolata', 'Droid Sans Mono', 'Monaco', monospace",
-      'editor.theme': 'dark',
+      'editor.theme': 'dark'
       // 'editor.reuseHeaders': true,
       // 'prettier.printWidth': 80,
-      'request.credentials': 'same-origin'
+      // 'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
     },
-    endpoint: '',
+    // endpoint: 'https://imkarolis.herokuapp.com/',
     tabs: [
       {
         endpoint: '',
@@ -189,6 +188,7 @@ const server = new ApolloServer({
       }
     ]
   }
+  // introspection: true,
 })
 
 // server.listen().then(({ url }) => {
