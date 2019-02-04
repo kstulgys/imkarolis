@@ -190,8 +190,8 @@ const server = new ApolloServer({
       // 'tracing.hideTracingResponse': true
     }
     // endpoint: '',
-  }
-  // introspection: true,
+  },
+  introspection: true
   // playground: true
 })
 
