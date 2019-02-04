@@ -9,7 +9,7 @@ const data = {
     fullName: 'Karolis Stulgys',
     email: 'karolis.stulgys@gmail.com',
     github: 'https://github.com/kstulgys',
-    curriculum_vitae: 'https://bit.ly/2G7jhgw'
+    curriculum_vitae: 'https://bit.ly/2ShKcvV'
   },
 
   social_media: {
