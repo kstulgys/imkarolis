@@ -29,7 +29,7 @@ const data = {
     backend: ['apollo-server', 'firestore/firebase', 'prisma', 'mongoDB']
   },
 
-  projects: [
+  portfolio: [
     {
       name: 'codesandbox',
       liveUrl: 'https://codesandbox.io/u/kstulgys',
@@ -74,10 +74,10 @@ const typeDefs = gql`
   }
 
   type Query {
-    contact_details: Details
-    skill_set: Technologies
-    projects: [Project]!
-    social_media: Social
+    CONTACT_DETAILS: Details
+    SKILL_SET: Technologies
+    PORTFOLIO: [Project]!
+    SOCIAL_MEDIA: Social
   }
 
   type Technologies {
@@ -102,15 +102,15 @@ const typeDefs = gql`
 // Provide resolver functions for schema fields
 const resolvers = {
   Query: {
-    contact_details: () => data.contact_details,
-    skill_set: () => {
+    CONTACT_DETAILS: () => data.contact_details,
+    SKILL_SET: () => {
       return {
         frontend: data.skill_set.frontend.map(ft => ft),
         backend: data.skill_set.backend.map(bt => bt)
       }
     },
-    projects: () => data.projects.map(p => p),
-    social_media: () => {
+    PORTFOLIO: () => data.portfolio.map(p => p),
+    SOCIAL_MEDIA: () => {
       return {
         github: data.social_media.github,
         linkedIn: data.social_media.linkedIn,
@@ -131,29 +131,31 @@ const defaultQuery = `
 # I'm looking forward to hearing from you @ karolis.stulgys@gmail.com :)
 
 query {
-  contact_details {
+  CONTACT_DETAILS {
     fullName
     email
     github
     curriculum_vitae
+
   }
 
-  # social_media {
+  # SOCIAL_MEDIA {
   #  instagram
   #  github
   #  linkedIn
   # }
 
-  projects {
+  PORTFOLIO {
     name
     liveUrl
     gitRepo
     description
   # features
   # stack
+
   }
 
-  # skill_set {
+  # SKILL_SET {
   #  frontend
   #  backend
   # }
@@ -167,6 +169,14 @@ const server = new ApolloServer({
     data
   },
   playground: {
+    tabs: [
+      {
+        endpoint: '',
+        query: defaultQuery,
+        name:
+          '==================================> CLICK ON THIS TAB <=================================='
+      }
+    ],
     settings: {
       // 'general.betaUpdates': false,
       // 'editor.cursorShape': 'line',
@@ -178,17 +188,11 @@ const server = new ApolloServer({
       // 'prettier.printWidth': 80,
       // 'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
-    },
-    // endpoint: 'https://imkarolis.herokuapp.com/',
-    tabs: [
-      {
-        endpoint: '',
-        query: defaultQuery,
-        name: 'Start here!!!'
-      }
-    ]
-  },
-  introspection: true
+    }
+    // endpoint: '',
+  }
+  // introspection: true,
+  // playground: true
 })
 
 // server.listen().then(({ url }) => {
