@@ -136,7 +136,6 @@ query {
     email
     github
     curriculum_vitae
-
   }
 
   # SOCIAL_MEDIA {
@@ -150,8 +149,8 @@ query {
     liveUrl
     gitRepo
     description
-  # features
-  # stack
+    # features
+    # stack
 
   }
 
