@@ -180,7 +180,7 @@ const server = new ApolloServer({
       'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
     },
-    endpoint: 'https://imkarolis.herokuapp.com/',
+    endpoint: '',
     tabs: [
       {
         endpoint: '',
