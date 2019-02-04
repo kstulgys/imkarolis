@@ -1,9 +1,6 @@
 {
   "name": "imkarolis",
   "description": "",
-  "engines": {
-    "node": "8.11.1"
-  },
   "dependencies": {
     "apollo-datasource-rest": "latest",
     "apollo-server": "2.1.0",

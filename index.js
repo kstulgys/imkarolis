@@ -1,6 +1,6 @@
 // const cors = require('cors')
 // const express = require('express')
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer, gql } = require('apollo-server')
 
 // const app = express()
 // app.use(cors())
@@ -8,9 +8,18 @@ const { ApolloServer, gql } = require('apollo-server');
 const data = {
   contact_details: {
     fullName: 'Karolis Stulgys',
-    email: 'karolis.stulgys@gmail.com'
+    email: 'karolis.stulgys@gmail.com',
+    github: 'https://github.com/kstulgys',
+    curriculum_vitae: 'https://bit.ly/2G7jhgw'
   },
-  technologies: {
+
+  social_media: {
+    github: 'https://github.com/kstulgys',
+    linkedIn: 'https://linkedin.com/in/karolis-stulgys',
+    instagram: 'https://www.instagram.com/karolis_stulgys'
+  },
+
+  skill_set: {
     frontend: [
       'react',
       'apollo-client',
@@ -20,7 +29,13 @@ const data = {
     ],
     backend: ['apollo-server', 'firestore/firebase', 'prisma', 'mongoDB']
   },
+
   projects: [
+    {
+      name: 'codesandbox',
+      liveUrl: 'https://codesandbox.io/u/kstulgys',
+      description: 'Small apps while learning stuff'
+    },
     {
       name: 'slack-clone-react-firebase',
       liveUrl: 'https://slack-clone-react-firebase.netlify.com/',
@@ -47,7 +62,7 @@ const data = {
       stack: ['react', 'mongoDB', 'apollo-server', 'apollo-client', 'antd-ui']
     }
   ]
-};
+}
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Project {
@@ -61,38 +76,55 @@ const typeDefs = gql`
 
   type Query {
     contact_details: Details
-    technologies: Technologies
+    skill_set: Technologies
     projects: [Project]!
+    social_media: Social
   }
+
   type Technologies {
     frontend: [String]
     backend: [String]
   }
 
+  type Social {
+    github: String
+    linkedIn: String
+    instagram: String
+  }
+
   type Details {
     fullName: String
     email: String
+    github: String
+    curriculum_vitae: String
   }
-`;
+`
 
-// Provide resolver functions for your schema fields
+// Provide resolver functions for schema fields
 const resolvers = {
   Query: {
     contact_details: () => data.contact_details,
-    technologies: () => {
+    skill_set: () => {
       return {
-        frontend: data.technologies.frontend.map(ft => ft),
-        backend: data.technologies.backend.map(bt => bt)
-      };
+        frontend: data.skill_set.frontend.map(ft => ft),
+        backend: data.skill_set.backend.map(bt => bt)
+      }
     },
-    projects: () => data.projects.map(p => p)
+    projects: () => data.projects.map(p => p),
+    social_media: () => {
+      return {
+        github: data.social_media.github,
+        linkedIn: data.social_media.linkedIn,
+        instagram: data.social_media.instagram
+      }
+    }
   }
-};
+}
 
 const defaultQuery = `
 # Hello and Wellcome! I'm pleased you have made it to my site
-# I'm Karolis, 28 y male open-minded, self-taught Front-End/Full-stack Developer
-# Besides the "internet of things" I have a great interest in fitness, athletic performance and longevity
+# I'm Karolis, 28 y male open-minded, self-taught Front-End/Full-Stack Developer
+# I have a great interest in fitness, athletic performance and longevity
 
 # I have made this GraphQL API as my page because everyone loves GraphQL
 # If you are not familiar with it make sure to check the docs @ https://graphql.org/
@@ -103,23 +135,31 @@ query {
   contact_details {
     fullName
     email
+    github
+    curriculum_vitae
   }
 
-  technologies{
-    frontend
-    backend
-  }
+  # social_media {
+  #  instagram
+  #  github
+  #  linkedIn
+  # }
 
   projects {
     name
     liveUrl
     gitRepo
     description
-    features
-    stack
+  # features
+  # stack
   }
+
+  # skill_set {
+  #  frontend
+  #  backend
+  # }
 }
-`;
+`
 
 const server = new ApolloServer({
   typeDefs,
@@ -141,7 +181,7 @@ const server = new ApolloServer({
       'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
     },
-    endpoint: '',
+    // endpoint: '',
     tabs: [
       {
         endpoint: '',
@@ -150,12 +190,12 @@ const server = new ApolloServer({
       }
     ]
   }
-});
+})
 
 // server.listen().then(({ url }) => {
 //   console.log(`🚀 Server ready at ${url}`);
 // });
 
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
-});
+  console.log(`🚀 Server ready at ${url}`)
+})
