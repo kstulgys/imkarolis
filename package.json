@@ -5,7 +5,9 @@
     "node": "10.x"
   },
   "dependencies": {
-    "apollo-server": "2.1.0"
+    "apollo-datasource-rest": "latest",
+    "apollo-server": "2.1.0",
+    "graphql": "14.0.2"
   },
   "license": "MIT",
   "main": "index.js",
