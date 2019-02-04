@@ -187,8 +187,8 @@ const server = new ApolloServer({
         name: 'Start here!!!'
       }
     ]
-  }
-  // introspection: true,
+  },
+  introspection: true
 })
 
 // server.listen().then(({ url }) => {
