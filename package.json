@@ -2,7 +2,7 @@
   "name": "imkarolis",
   "description": "",
   "engines": {
-    "node": "10.3.0"
+    "node": "8.3"
   },
   "dependencies": {
     "apollo-datasource-rest": "latest",
