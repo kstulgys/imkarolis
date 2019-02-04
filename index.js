@@ -1,7 +1,6 @@
+const { ApolloServer, gql } = require('apollo-server')
 // const cors = require('cors')
 // const express = require('express')
-const { ApolloServer, gql } = require('apollo-server')
-
 // const app = express()
 // app.use(cors())
 
@@ -181,7 +180,7 @@ const server = new ApolloServer({
       'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
     },
-    endpoint: '',
+    endpoint: 'https://imkarolis.herokuapp.com/',
     tabs: [
       {
         endpoint: '',

@@ -5,11 +5,7 @@
     "node": "8.11.1"
   },
   "dependencies": {
-    "apollo-datasource-rest": "latest",
-    "apollo-server": "2.1.0",
-    "cors": "2.8.5",
-    "express": "4.16.4",
-    "graphql": "14.0.2"
+    "apollo-server": "2.1.0"
   },
   "license": "MIT",
   "main": "index.js",
