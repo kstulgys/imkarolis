@@ -181,7 +181,7 @@ const server = new ApolloServer({
       'request.credentials': 'same-origin'
       // 'tracing.hideTracingResponse': true
     },
-    // endpoint: '',
+    endpoint: '',
     tabs: [
       {
         endpoint: '',
