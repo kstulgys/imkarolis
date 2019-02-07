@@ -123,7 +123,7 @@ const resolvers = {
 const defaultQuery = `
 # Hello and Wellcome! I'm pleased you have made it to my site
 # I'm Karolis, 28 y male open-minded, self-taught Front-End/Full-Stack Developer
-# I have a great interest in fitness, athletic performance and longevity
+# I have a great interest in web-development, athletic performance and longevity
 
 # I have made this GraphQL API as my page because everyone loves GraphQL
 # If you are not familiar with it make sure to check the docs @ https://graphql.org/
