@@ -15,7 +15,8 @@ const data = {
   social_media: {
     github: 'https://github.com/kstulgys',
     linkedIn: 'https://linkedin.com/in/karolis-stulgys',
-    instagram: 'https://www.instagram.com/karolis_stulgys'
+    instagram: 'https://www.instagram.com/karolis_stulgys',
+    medium: 'https://medium.com/karolis-stulgys'
   },
 
   skill_set: {
@@ -89,6 +90,7 @@ const typeDefs = gql`
     github: String
     linkedIn: String
     instagram: String
+    medium: String
   }
 
   type Details {
@@ -114,7 +116,8 @@ const resolvers = {
       return {
         github: data.social_media.github,
         linkedIn: data.social_media.linkedIn,
-        instagram: data.social_media.instagram
+        instagram: data.social_media.instagram,
+        medium: data.social_media.medium
       }
     }
   }
@@ -142,6 +145,7 @@ query {
   #  instagram
   #  github
   #  linkedIn
+  #  medium
   # }
 
   PORTFOLIO {
