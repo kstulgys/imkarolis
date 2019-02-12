@@ -49,6 +49,19 @@ const data = {
       ],
       stack: ['react', 'firebase/firestore', 'semantic UI']
     },
+        {
+      name: 'lg-macros',
+      liveUrl: 'https://lg-macros.netlify.com/',
+      gitRepo: 'https://github.com/kstulgys/lg-macros',
+      description:
+        'Calories, macros and meal planner based on Lean Gains method',
+      features: [
+        'Calories calculator',
+        'Custom fiber intake'
+        'Macros split per calories',
+      ],
+      stack: ['react', 'Shards UI']
+    },
     {
       name: 'twitter-clone-apollo',
       liveUrl: 'https://twitter-clone-apollo-client.herokuapp.com',
