@@ -57,7 +57,7 @@ const data = {
         'Calories, macros and meal planner based on Lean Gains method',
       features: [
         'Calories calculator',
-        'Custom fiber intake'
+        'Custom fiber intake',
         'Macros split per calories',
       ],
       stack: ['react', 'Shards UI']
