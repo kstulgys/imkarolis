@@ -34,7 +34,7 @@ const data = {
     {
       name: 'codesandbox',
       liveUrl: 'https://codesandbox.io/u/kstulgys',
-      description: 'Small apps while learning stuff'
+      description: 'Small apps while learning things'
     },
     {
       name: 'lg-macros',
