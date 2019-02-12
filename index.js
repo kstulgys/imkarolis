@@ -37,19 +37,6 @@ const data = {
       description: 'Small apps while learning stuff'
     },
     {
-      name: 'slack-clone-react-firebase',
-      liveUrl: 'https://slack-clone-react-firebase.netlify.com/',
-      gitRepo: 'https://github.com/kstulgys/slack-clone-react-firebase',
-      description:
-        'Sample chat application powered by firebase/firestore real time database',
-      features: [
-        'file upload',
-        'user registration and authentication',
-        'only registered users can write and read channels and messages'
-      ],
-      stack: ['react', 'firebase/firestore', 'semantic UI']
-    },
-        {
       name: 'lg-macros',
       liveUrl: 'https://lg-macros.netlify.com/',
       gitRepo: 'https://github.com/kstulgys/lg-macros',
@@ -62,6 +49,20 @@ const data = {
       ],
       stack: ['react', 'Shards UI']
     },
+    {
+      name: 'slack-clone-react-firebase',
+      liveUrl: 'https://slack-clone-react-firebase.netlify.com/',
+      gitRepo: 'https://github.com/kstulgys/slack-clone-react-firebase',
+      description:
+        'Sample chat application powered by firebase/firestore real time database',
+      features: [
+        'file upload',
+        'user registration and authentication',
+        'only registered users can write and read channels and messages'
+      ],
+      stack: ['react', 'firebase/firestore', 'semantic UI']
+    },
+
     {
       name: 'twitter-clone-apollo',
       liveUrl: 'https://twitter-clone-apollo-client.herokuapp.com',
