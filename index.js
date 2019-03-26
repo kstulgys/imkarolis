@@ -23,9 +23,7 @@ const data = {
     frontend: [
       'react',
       'apollo-client',
-      'semantic-ui',
-      'material-ui',
-      'antd-ui'
+      'html, css',
     ],
     backend: ['apollo-server', 'firestore/firebase', 'prisma', 'mongoDB']
   },
@@ -50,6 +48,20 @@ const data = {
       stack: ['react', 'Shards UI']
     },
     {
+      name: 'rpetify',
+      liveUrl: 'https://rpetify.netlify.com/',
+      gitRepo: 'https://github.com/kstulgys/rpetify',
+      description:
+        'Workout app that calulates weights based on RPE (rate of perceived exertion) and plates on the bar',
+      features: [
+        'Add/Delete lifts',
+        'Add/Delete sets',
+        'Calculate weights based on RPE',
+        'Calculate plates on bar for warmup and worksets'
+      ],
+      stack: ['react', 'localStorage', 'shards-UI']
+    },
+    {
       name: 'slack-clone-react-firebase',
       liveUrl: 'https://slack-clone-react-firebase.netlify.com/',
       gitRepo: 'https://github.com/kstulgys/slack-clone-react-firebase',
@@ -62,7 +74,6 @@ const data = {
       ],
       stack: ['react', 'firebase/firestore', 'semantic UI']
     },
-
     {
       name: 'twitter-clone-apollo',
       liveUrl: 'https://twitter-clone-apollo-client.herokuapp.com',
