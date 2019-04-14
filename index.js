@@ -29,10 +29,26 @@ const data = {
   },
 
   portfolio: [
+    
     {
       name: 'codesandbox',
       liveUrl: 'https://codesandbox.io/u/kstulgys',
       description: 'Small apps while learning things'
+    },
+    {
+      name: 'mvc-vanillajs-recipes-app',
+      liveUrl: 'https://mvc-vanillajs-recipes-app.netlify.com/',
+      gitRepo: 'https://github.com/kstulgys/mvc-vanillajs-recipes-app/tree/master',
+      description:
+        'Recipe search application',
+      features: [
+        'Search by term',
+        'Pagination',
+        'Get ingredient list and recipe info',
+        'Add ingredient list to shopping cart',
+        'Add recipe to favorites and localStorage',
+      ],
+      stack: ['sass']
     },
     {
       name: 'lg-macros',
