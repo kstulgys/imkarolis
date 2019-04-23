@@ -50,6 +50,18 @@ const data = {
       ],
       stack: ['sass']
     },
+     {
+      name: 'booking-app-css',
+      liveUrl: 'https://hotel-booking-app-css.netlify.com/',
+      gitRepo: 'https://github.com/kstulgys/booking-app-css',
+      description:
+        'Hotel booking app styled with pure CSS',
+      features: [
+        'Modern',
+        'Responsive',
+      ],
+      stack: ['HTML', 'CSS']
+    },
     {
       name: 'lg-macros',
       liveUrl: 'https://lg-macros.netlify.com/',
